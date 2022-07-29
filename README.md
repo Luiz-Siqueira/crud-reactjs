@@ -36,4 +36,4 @@ Pronto, agora a tela de interações devera abrir!
 
 ## Bônus
 
-Dentro da pasta `postman` tem a colletion prontas
+Você pode baixar o aquivo do `postman` com as colletion prontas
