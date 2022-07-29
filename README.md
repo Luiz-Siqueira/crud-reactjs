@@ -20,6 +20,9 @@ Inicie o servidor local com o seguinte comando:
 ```bash
   npm start
 ```
+
+**Pode ser que você tenha que alterar o arquivo database.js com as informações do seu ambiente**
+
 Pronto, agora seu servidor API está online na porta 5000!
 
 **Subindo o  Front-End**
