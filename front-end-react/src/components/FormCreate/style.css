@@ -1,0 +1,44 @@
+
+.container-primary{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+}
+.container-secondary{
+    width:48%;
+}
+
+span{
+    margin-bottom:10px;
+}
+
+input{
+    width:100%;
+    height:30px;
+    padding-left:10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.container-flex{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom:40px;
+    justify-content: space-between;
+}
+
+.button{
+    width:40%;
+    height:40px;
+    background-color: #E74F74;
+    border-radius: 10px;
+    border:0;
+    cursor: pointer;
+    color:white;
+    display: block;
+    margin: 0 auto;
+}
