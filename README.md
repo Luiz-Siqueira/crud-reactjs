@@ -6,7 +6,22 @@ Um crud construido com NodeJS e React.js
 
 
 
-Primeiramente você deve ter o **NodeJS, React.js e PostgreSQL** instalados em sua maquina e **baixar backup do banco de dados com o nome de bd** ou criar uma tabela com o nome **userdb** para executar o projeto localmente.
+Primeiramente você deve ter o **NodeJS, React.js e PostgreSQL** instalados em sua maquina, criar um banco com o nome **userdb** e criar uma tabela com o comando abaixo para executar o projeto localmente.
+
+
+```sql
+CREATE TABLE public.usuario (
+  userid SERIAL,
+  name CHAR(255),
+  password VARCHAR NOT NULL,
+  email VARCHAR,
+  CONSTRAINT usuario_pkey PRIMARY KEY(userid)
+) ;
+
+
+ALTER TABLE public.usuario
+  OWNER TO postgres;
+```
 
 
 **Subindo o Back-End**
