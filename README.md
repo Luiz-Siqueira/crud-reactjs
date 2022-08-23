@@ -6,7 +6,8 @@ Um crud construido com NodeJS e React.js
 
 
 
-Primeiramente você deve ter o **NodeJS, React.js e MYSQL** instalados em sua maquina e **baixar backup do banco de dados com o nome de bd** ou criar uma tabela com o nome **user_table** para executar o projeto localmente.
+Primeiramente você deve ter o **NodeJS, React.js e PostgreSQL** instalados em sua maquina e **baixar backup do banco de dados com o nome de bd** ou criar uma tabela com o nome **userdb** para executar o projeto localmente.
+
 
 **Subindo o Back-End**
 
@@ -37,6 +38,3 @@ Dentro da pasta front-end-react Execute o comando de instalação das depêndenc
 Pronto, agora a tela de interações devera abrir!
 
 
-## Bônus
-
-Você pode baixar o aquivo do `postman` com as colletion prontas
