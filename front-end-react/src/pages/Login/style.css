@@ -1,0 +1,79 @@
+*{
+    font-family: 'Open Sans';
+}
+.wrapper-login{
+    display: flex;
+    flex-direction:row;
+}
+.container-writer{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:30px;
+}
+
+.container-writer > h3{
+    margin-top:80px;
+    font-size:80px;
+    font-family: 'Silkscreen', cursive;
+    color:#E74F74;
+    text-shadow: 0.00000001em 0.00000001em 0.00000001em black
+}
+.container-writer > p{
+    margin-top:-20px;
+    justify-self: flex-end;
+    font-size:20px;
+ }
+
+.container-login{
+    background-color:white;
+    width:20%;
+    height:100vh;
+    /* position: absolute;
+    right: 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:70px;
+}
+
+.container-login > h3{
+    font-weight: 800;
+    color:#E74F74
+}
+
+.container-primary{
+    display: block;
+    padding:5px;
+    display: flex;
+}
+
+.container-primary > input{
+    width: 90%;
+    border-radius: 5px;
+    outline: none;
+    border:1px solid gray;
+}
+input[type=submit]{
+    width:130px;
+    margin:0 auto;
+}
+
+
+.container-hr{
+    width:80%;
+    height: 1px;
+    background-color: gray;
+    margin-top:50px;
+}
+
+.register-button{
+    margin-top:30px;
+}
+
+
+.register-button span{
+    color:#E74F74;
+    cursor:pointer
+}

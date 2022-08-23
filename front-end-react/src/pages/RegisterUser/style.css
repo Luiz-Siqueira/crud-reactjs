@@ -7,8 +7,19 @@
     margin-top:40px;
 }
 
+.container-hr{
+    margin:0 auto;
+}
 .container h3{
     font-size:18px;
     text-align: center;
+}
+.text-login {
+    display: flex;
+    justify-content: center;
+}
+.text-login span{
+    color:#E74F74;
+    cursor: pointer;
 }
 

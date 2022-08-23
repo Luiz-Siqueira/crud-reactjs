@@ -1,35 +1,39 @@
 import './style.css';
-import { React, useState } from 'react';
-import api from "../../services/api.js";
-import { Navigate } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import {api} from '../../services/api';
 export default function FormCreate() {
+    const navigate = useNavigate();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordRepeat, setPasswordRepeat] = useState('')
-    const [redirect, setRedirect] = useState()
 
-    const createUser = async (e) => {
+    const createUser = async (e: { preventDefault: () => void; }) => {
         e.preventDefault()
 
         let passwordVerify = verifyPassword();
         if(name && email&& password  && passwordRepeat){
             if (passwordVerify) {
-                await api.post("/create", {
-                    name: name,
-                    email: email,
+
+                const user = {
+                    nome: name,
+                    email:email,
                     password: password
-                })
-                    .then((response) => {
+                }
+
+                await api.post("/register", {user})
+                    .then((response:any) => {
                         if (response.data.sucess) {
+                            //fazer toast mais bonito com mensage do backend
                             alert('Usuário cadastrado com sucesso!')
-                            setRedirect(true)
+                            navigate('/')
                         } else {
                             alert('Algo deu errado, tente novamente')
                         }
                     })
-                    .catch((err) => {
+                    .catch((err:any) => {
                         console.error("Ops! Ocorreu um erro" + err);
                     });
             } else {
@@ -41,7 +45,7 @@ export default function FormCreate() {
     }
 
 
-    const verifyPassword = (e) => {
+    const verifyPassword = () => {
         if (password !== passwordRepeat) {
             return false
         } else {
@@ -51,14 +55,10 @@ export default function FormCreate() {
 
     return (
         <div>
-            {redirect ? 
-                <Navigate to="/users" replace={true} />
-            :
-           
             <form onSubmit={createUser}>
                 <div className="container-primary">
                     <span>Nome:</span>
-                    <input type='text' name="name" onChange={(e) => setName(e.target.value)} />
+                    <input className='form-control' type='text' name="name" onChange={(e) => setName(e.target.value)} />
                 </div>
 
                 <div className="container-primary">
@@ -77,7 +77,6 @@ export default function FormCreate() {
                 </div>
                 <input className='button' type='submit' value="Cadastrar" />
             </form>
-            }
         </div>
     );
 }
