@@ -1,6 +1,6 @@
 # crud-reactjs
 
-Um crud construido com NodeJS e React.js
+Um crud construido com NodeJS e React.js usando TypeScript e PostgreSQL
 
 ## Rodando localmente
 
