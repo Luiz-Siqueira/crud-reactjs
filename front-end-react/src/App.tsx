@@ -1,9 +1,9 @@
 import { RoutesApp } from "./rotas";
-import './global.css'
+import "./index.css";
 function App() {
   return (
-    <div className="teste">
-      <RoutesApp/>
+    <div>
+      <RoutesApp />
     </div>
   );
 }
