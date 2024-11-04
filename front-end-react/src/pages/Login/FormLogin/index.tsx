@@ -37,7 +37,7 @@ export function FormLogin() {
         label="Password"
         type="password"
         name="password"
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(value) => setPassword(value)}
         value={password}
       />
       <div className="flex justify-center">
