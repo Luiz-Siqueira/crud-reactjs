@@ -1,4 +1,3 @@
-import "./style.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../../providers/auth";
@@ -25,22 +24,22 @@ export function FormLogin() {
 
   return (
     <div>
-      <div>
-        <span>Email:</span>
-        <InputComponent
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div className="mt-2 mb-3">
-        <span>Password:</span>
-        <InputComponent
-          type="password"
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
+      <InputComponent
+        label="Email"
+        type="email"
+        name="email"
+        onChange={(value) => {
+          setEmail(value);
+        }}
+        value={email}
+      />
+      <InputComponent
+        label="Password"
+        type="password"
+        name="password"
+        onChange={(e) => setPassword(e.target.value)}
+        value={password}
+      />
       <div className="flex justify-center">
         <Button text="SingIn" onClick={verifyLogin} />
       </div>
